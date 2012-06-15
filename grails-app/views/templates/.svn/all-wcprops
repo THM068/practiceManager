@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/zawork/!svn/ver/40/practiceManager/grails-app/views/templates
+END
+_clientForm.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/zawork/!svn/ver/55/practiceManager/grails-app/views/templates/_clientForm.gsp
+END
+_successTemplate.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/zawork/!svn/ver/48/practiceManager/grails-app/views/templates/_successTemplate.gsp
+END
+_showTimeSheetTemplate.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zawork/!svn/ver/57/practiceManager/grails-app/views/templates/_showTimeSheetTemplate.gsp
+END
+_beanConfig.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/zawork/!svn/ver/40/practiceManager/grails-app/views/templates/_beanConfig.gsp
+END
+_navigation.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/zawork/!svn/ver/54/practiceManager/grails-app/views/templates/_navigation.gsp
+END
+_contactForm.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/zawork/!svn/ver/55/practiceManager/grails-app/views/templates/_contactForm.gsp
+END
+_resources.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/zawork/!svn/ver/47/practiceManager/grails-app/views/templates/_resources.gsp
+END
+_timeSheetForm.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/zawork/!svn/ver/55/practiceManager/grails-app/views/templates/_timeSheetForm.gsp
+END
+_entryForm.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/zawork/!svn/ver/57/practiceManager/grails-app/views/templates/_entryForm.gsp
+END

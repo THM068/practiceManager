@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/zawork/!svn/ver/34/practiceManager/grails-app/domain/com/practiceManager
+END
+User.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zawork/!svn/ver/56/practiceManager/grails-app/domain/com/practiceManager/User.groovy
+END
+Client.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zawork/!svn/ver/51/practiceManager/grails-app/domain/com/practiceManager/Client.groovy
+END
+Role.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zawork/!svn/ver/36/practiceManager/grails-app/domain/com/practiceManager/Role.groovy
+END
+Address.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zawork/!svn/ver/45/practiceManager/grails-app/domain/com/practiceManager/Address.groovy
+END
+JobRole.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zawork/!svn/ver/44/practiceManager/grails-app/domain/com/practiceManager/JobRole.groovy
+END
+TimeSheet.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/zawork/!svn/ver/55/practiceManager/grails-app/domain/com/practiceManager/TimeSheet.groovy
+END
+UserRole.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/zawork/!svn/ver/36/practiceManager/grails-app/domain/com/practiceManager/UserRole.groovy
+END
+Matter.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/zawork/!svn/ver/56/practiceManager/grails-app/domain/com/practiceManager/Matter.groovy
+END
+Contact.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zawork/!svn/ver/57/practiceManager/grails-app/domain/com/practiceManager/Contact.groovy
+END
+TimeSheetEntry.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/zawork/!svn/ver/57/practiceManager/grails-app/domain/com/practiceManager/TimeSheetEntry.groovy
+END
+Code.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/zawork/!svn/ver/57/practiceManager/grails-app/domain/com/practiceManager/Code.groovy
+END

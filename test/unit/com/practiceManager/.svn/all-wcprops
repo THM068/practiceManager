@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/zawork/!svn/ver/40/practiceManager/test/unit/com/practiceManager
+END
+ConvertTimeSpec.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/zawork/!svn/ver/53/practiceManager/test/unit/com/practiceManager/ConvertTimeSpec.groovy
+END
+TimeSheetControllerSpec.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/zawork/!svn/ver/55/practiceManager/test/unit/com/practiceManager/TimeSheetControllerSpec.groovy
+END
+CodeControllerTests.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/zawork/!svn/ver/56/practiceManager/test/unit/com/practiceManager/CodeControllerTests.groovy
+END
+ContactControllerSpec.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/zawork/!svn/ver/47/practiceManager/test/unit/com/practiceManager/ContactControllerSpec.groovy
+END
+TimeSheetEntryControllerSpec.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/zawork/!svn/ver/57/practiceManager/test/unit/com/practiceManager/TimeSheetEntryControllerSpec.groovy
+END
+ClientControllerSpec.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/zawork/!svn/ver/51/practiceManager/test/unit/com/practiceManager/ClientControllerSpec.groovy
+END

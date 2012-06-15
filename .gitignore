@@ -1,0 +1,9 @@
+.classpath
+.idea/
+.project
+.settings/
+out/
+practiceManager-grailsPlugins.iml
+practiceManager.iml
+target/
+*.iml

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/zawork/!svn/ver/35/practiceManager/fixtures
+END
+AddClients.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/zawork/!svn/ver/45/practiceManager/fixtures/AddClients.groovy
+END
+AddCodes.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/zawork/!svn/ver/57/practiceManager/fixtures/AddCodes.groovy
+END
+AddContacts.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/zawork/!svn/ver/48/practiceManager/fixtures/AddContacts.groovy
+END
+AddMatter.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/zawork/!svn/ver/56/practiceManager/fixtures/AddMatter.groovy
+END
+AddJobRoles.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/zawork/!svn/ver/44/practiceManager/fixtures/AddJobRoles.groovy
+END

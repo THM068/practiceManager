@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/zawork/!svn/ver/40/practiceManager/test/functional/com/practiceManager/pages
+END
+CreateClientFormPage.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/zawork/!svn/ver/40/practiceManager/test/functional/com/practiceManager/pages/CreateClientFormPage.groovy
+END
+ListClientPage.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/zawork/!svn/ver/40/practiceManager/test/functional/com/practiceManager/pages/ListClientPage.groovy
+END
+LoginPage.groovy
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/zawork/!svn/ver/40/practiceManager/test/functional/com/practiceManager/pages/LoginPage.groovy
+END

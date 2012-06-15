@@ -1,0 +1,116 @@
+package com.practiceManager
+import grails.converters.JSON
+
+class ClientController {
+    def springSecurityService
+
+    def index = {
+      redirect(action:'list')
+    }
+
+    def create = {
+        [cmd:new Client(address:new Address())]
+    }
+
+    def success = {}
+
+    def save = {
+        Client client = new Client(address:new Address())
+        client.properties = params
+
+            if(client.save()) {
+                flash.message = message(code:'client.create.success')
+                redirect(action:'success')
+                return
+             }else{
+                 client.address?.validate()
+                 render(view:'create',model:[cmd:client])
+                 return
+            }
+    }
+
+    def show = {
+         def client= params.id ? Client.get(params.id):null
+         if(client){
+             return [clientInstance:client]
+         }
+        else{
+             flash.message =  message(code:'client.show.no.such.record')
+             redirect(action:'list')
+         }
+    }
+
+    def edit = {
+         def client= params.id ? Client.get(params.id):null
+         if(client){
+            render(view:'edit',model:[cmd:client])
+         }else{
+             flash.message = message(code:'client.edit.no.such.record')
+             redirect(action:'list')
+         }
+
+    }
+
+    def update = {
+         def client = params.id ? Client.get(params.id):null
+        if(client){
+            client.properties = params
+            if(client.save()){
+              println "1"
+              flash.message = message(code:'client.update.success')
+              redirect(action:'success')
+            }
+            else{
+                 client.address.validate()
+                 render(view:'edit',model:[cmd:client])
+            }
+
+        }
+    }
+
+    def delete = {
+       def client = params.id ?  Client.get(params.id): null
+       if(client){
+            client.delete()
+            flash.message = message(code:'client.delete.success')
+            redirect(action:'list')
+       }
+       else{
+           flash.message = message(code:'client.delete.record.fail')
+            redirect(action:'list')
+       }
+   }
+
+    def list = {
+        params.max = Math.min(params.max ? params.int('max') : 30, 50)
+        [clientInstanceList: Client.list(params), clientInstanceTotal: Client.count()]
+
+    }
+
+    def autoSearch = {
+        def results = Client.withCriteria {
+         ilike 'name', params.term + '%'
+         }
+       render results.name as JSON
+    }
+
+    def findClient = {
+        def search = params.q
+        if(search){
+            def list = Client.findAllByNameIlike(search+"%")
+            def count = Client.countByNameIlike(search+"%")
+            render(view:'list',model:[clientInstanceList:list, clientInstanceTotal:count])
+            return
+        }
+        else{
+           flash.message = "The client record does not exists in the database"
+           render(view:'list',model:[clientInstanceList:[], clientInstanceTotal:0])
+        }
+    }
+
+    def currentMe = {
+        [user : springSecurityService.getCurrentUser()]
+    }
+
+
+}

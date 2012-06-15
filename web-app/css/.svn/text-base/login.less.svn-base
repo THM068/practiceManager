@@ -1,0 +1,39 @@
+@import "common-stuff.less";
+body{
+    background-color:white;
+}
+
+#login-logo-holder{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#login-body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    min-height:500px;
+    border:none;
+}
+
+#login {
+
+    .inner{
+         margin-left: 220px;
+         margin-top:20px;
+
+           .login_message{
+                 width:360px;
+                 background: #fff3f3;
+                 border: 1px solid red;
+                 color: #cc0000;
+                 margin: 10px 0 5px 0;
+                 padding: 5px 0 5px 0;
+           }
+    }
+}
+
+.submit-button-position{
+      margin-left:309px;
+}
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/zawork/!svn/ver/40/practiceManager/grails-app/views/client
+END
+edit.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/zawork/!svn/ver/47/practiceManager/grails-app/views/client/edit.gsp
+END
+create.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/zawork/!svn/ver/47/practiceManager/grails-app/views/client/create.gsp
+END
+show.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/zawork/!svn/ver/55/practiceManager/grails-app/views/client/show.gsp
+END
+list.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/zawork/!svn/ver/56/practiceManager/grails-app/views/client/list.gsp
+END
+success.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/zawork/!svn/ver/48/practiceManager/grails-app/views/client/success.gsp
+END

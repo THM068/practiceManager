@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/zawork/!svn/ver/32/practiceManager/web-app/WEB-INF/tld
+END
+grails.tld
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/zawork/!svn/ver/32/practiceManager/web-app/WEB-INF/tld/grails.tld
+END
+c.tld
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/zawork/!svn/ver/32/practiceManager/web-app/WEB-INF/tld/c.tld
+END
+spring.tld
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/zawork/!svn/ver/32/practiceManager/web-app/WEB-INF/tld/spring.tld
+END
+fmt.tld
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/zawork/!svn/ver/32/practiceManager/web-app/WEB-INF/tld/fmt.tld
+END

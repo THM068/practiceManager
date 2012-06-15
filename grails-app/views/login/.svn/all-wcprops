@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/zawork/!svn/ver/36/practiceManager/grails-app/views/login
+END
+denied.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/zawork/!svn/ver/36/practiceManager/grails-app/views/login/denied.gsp
+END
+auth.gsp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/zawork/!svn/ver/39/practiceManager/grails-app/views/login/auth.gsp
+END

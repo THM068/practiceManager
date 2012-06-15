@@ -1,0 +1,163 @@
+package com.practiceManager
+
+import grails.test.*
+import grails.plugin.spock.ControllerSpec
+import spock.lang.Ignore
+import grails.plugins.springsecurity.SpringSecurityService
+
+class ClientControllerSpec extends ControllerSpec {
+
+   def "Nobuhle can display a create page"(){
+         expect:
+               def model = controller.create()
+               model.cmd instanceof Client
+   }
+
+     def "Nobuhle can show a clients details"(){
+          given:'a domain class'
+          Address a1 = new Address(id:1,address: 'asds',city:'redhill',postalCode: '2323',region: 'Gauteng')
+          Client c1 = new Client(id:1,name:'alpha',code:'a',email: 't@.com',address: a1,fax: 'ass',cellPhone: 'asd',phone: '23432')
+          mockDomain Client, [c1]
+          mockDomain Address ,[a1]
+
+         and:'a given params id'
+            controller.params.id  = 1
+
+         when:'the show action is called'
+             def model = controller.show()
+
+         then:
+             model.clientInstance instanceof Client
+             model.clientInstance.id == 1
+             model.clientInstance.name == 'alpha'
+             model.clientInstance.address.city == 'redhill'
+     }
+
+    def "Error is displayed when invalid id is given"(){
+         given:'a database with no clients'
+               mockDomain Client,[]
+
+         and:'and a given params'
+            controller.params.id = 1
+
+         and:'flash message'
+            controller.metaClass.message = { LinkedHashMap key -> 'client.show.no.such.record' }
+
+         when:'call the show action'
+            controller.show()
+
+         then:
+           controller.flash.message ==  'client.show.no.such.record'
+
+         and:
+           controller.redirectArgs.action == 'list'
+
+    }
+
+   @Ignore
+   def "Nobuhle can save a clients details"(){
+       given:'an empty database'
+            mockDomain Client
+            mockDomain Address
+
+        and:"and valid parameters"
+           controller.params.name = 'Leapfin'
+           controller.params.code = 'L'
+           controller.params.phone = '23423453'
+           controller.params.fax = '23423453'
+           controller.params.cellPhone = '23423453'
+           controller.params.email = 'email@hotmail.com'
+           controller.params["address.city"]='redhill'
+           controller.params["address.region"]='Gauteng'
+           controller.params["address.postalCode"]='assd'
+           controller.params["address.address"]='asdsad'
+           controller.metaClass.message = { LinkedHashMap key -> 'client.create.success'}
+
+        when:"the save action is called"
+            controller.save()
+
+        then:"there is a customer in the database"
+            Client.list().size() == 1
+        and:
+           def client = Client.read(1)
+           client.name == 'Leapfin'
+           client.code ==  'L'
+           client.address.city == 'redhill'
+           client.address.region == 'Gauteng'
+           client.address.postalCode == 'assd'
+           client.address.address=='asdsad'
+        and:
+
+        controller.redirectArgs.action=='list'
+   }
+
+    def "Nobuhle gets error when enters invalid values"(){
+        given:'an empty database'
+            mockDomain Client
+            mockDomain Address
+
+        and:"and valid parameters"
+           controller.params.name = ''
+           controller.params.code = 'L'
+           controller.params.phone = ''
+           controller.params.fax = '23423453'
+           controller.params.cellPhone = '23423453'
+           controller.params.email = 'emailhotmail.com'
+           controller.params["address.city"]='redhill'
+           controller.params["address.region"]=''
+           controller.params["address.postalCode"]='assd'
+           controller.params["address.address"]='asdsad'
+
+
+        when:"the save action is called"
+            controller.save()
+
+        then:"there is a customer in the database"
+            Client.list().size() == 0
+
+        and:'appropriate render args are displayed'
+             controller.renderArgs.view == 'create'
+             controller.renderArgs.model.cmd.hasErrors()
+
+    }
+
+    def "Nobuhle can display edit client form "(){
+        given:'a customer record in the database'
+          Address a1 = new Address(id:1,address: 'asds',city:'redhill',postalCode: '2323',region: 'Gauteng')
+          Client c1 = new Client(id:1,name:'alpha',code:'a',email: 't@.com',address: a1,fax: 'ass',cellPhone: 'asd',phone: '23432')
+          mockDomain Client, [c1]
+          mockDomain Address ,[a1]
+
+          and:'a valid id parameter'
+          controller.params.id = '1'
+
+          when:'edit action is called'
+          controller.edit()
+
+          then:'render args are displayed'
+           controller.renderArgs.view == 'edit'
+          and:'customer is present in model'
+          controller.renderArgs.model.cmd.id == 1
+          controller.renderArgs.model.cmd.name == 'alpha'
+          controller.renderArgs.model.cmd.email == 't@.com'
+
+    }
+
+    def "Nobuhle is a current user in the action"() {
+        given:
+             User user = new User(id:1)
+             mockDomain(User,[ user ])
+             def service =  Mock(SpringSecurityService)
+             controller.springSecurityService =  service
+
+        when:'the action is called'
+              def model = controller.currentMe()
+
+        then:
+            1 * service.getCurrentUser() >> user
+
+              model.user.id == 1
+    }
+
+
+}
